@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Problem Solver</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Universal Engineering Problem Solver</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Select Problem Type</h2>
+            <form id="problemForm">
+                <label for="problemType">Problem Type:</label>
+                <select id="problemType" name="problemType" onchange="updateForm()">
+                    <option value="mechanical">Mechanical</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="structural">Structural</option>
+                    <option value="thermodynamics">Thermodynamics</option>
+                </select>
+
+                <!-- Additional inputs that change based on the problem type -->
+                <div id="additionalFields"></div>
+
+                <input type="submit" value="Solve">
+            </form>
+        </section>
+
+        <section>
+            <h2>3D Model of Solution</h2>
+            <div id="3dModelContainer"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Engineering Solutions</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
